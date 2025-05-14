@@ -1,27 +1,38 @@
-## Supplier Data Processor
+# 🏗️ GlobalDB Supplier Search App
 
-A desktop tool to clean and enrich supplier data files (CSV/Excel) using the GlobalDatabase API.
+A Python GUI application to clean, enrich, and validate supplier data using the [Global Database API](https://globaldatabase.com).  
+No Python installation required for end users — just double-click the `.exe`.
 
-## 📦 Setup (If You’re a Developer)
+---
 
-1. Clone/download this repository.
-2. Install Python 3.9 or later.
-3. Install dependencies:
+## 📦 Features
+
+- Input: Excel/CSV supplier data
+- Cleans and finds missing postcodes or employee counts
+- Maps "Region (ONS Definition)" to country codes
+- Enriches data using Global Database API
+- Outputs a new Excel file with matched details
+- Built with `tkinter`, `pandas`, `requests`
+
+---
+
+## 🚀 Quick Start for Developers
 
 ```bash
+git clone https://github.com/pjoshi1710/GD_SupplierSearch.git
+cd GD_SupplierSearch
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
 
-
-Run the app:
-```bash
+To run:
 python main.py
 
-🔍 Features
-Supports .csv and .xlsx
-Accepts sheet name input at runtime
-Identifies missing values in:
-  Postcodes
-  Number of Employees
-Uses Region (ONS Definition) to generate country_code
-Fetches supplier details using the GlobalDatabase API
-Exports enriched results as Excel
+📄 Files
+main.py – GUI + logic
+.env – API token (not tracked in Git)
+requirements.txt – dependencies
+README.md – this file
+
+💬 Questions?
+Feel free to raise an issue or email pjoshi@elcom.com.
